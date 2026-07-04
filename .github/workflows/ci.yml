@@ -1,0 +1,42 @@
+name: Student Accommodation Finder CI
+
+# Trigger the pipeline on pushes or pull requests to main branches
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Clone the repository onto the GitHub runner
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    # Step 2: Set up the environment (Node.js)
+    - name: Set up Node.js Environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm' # Automatically caches dependencies to make future runs twice as fast!
+
+    # Step 3: Install clean dependencies based strictly on your package-lock.json
+    - name: Install Dependencies
+      run: npm ci
+
+    # Step 4: Check code quality/formatting (catches missing semicolons, bad syntax)
+    # Note: If you don't use a linter yet, you can comment this out by adding a '#' at the start of the line
+    - name: Run Code Linter
+      run: npm run lint --if-present
+
+    # Step 5: Try compiling/building the application
+    # This ensures a broken import or syntax mistake doesn't break production later
+    - name: Build Project
+      run: npm run build
+
+    # Step 6: Execute your tests (e.g., testing the "filter by distance" logic)
+    - name: Run Test Suite
+      run: npm test --if-present

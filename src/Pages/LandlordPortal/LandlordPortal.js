@@ -112,7 +112,6 @@ function LandlordDashboard() {
             </a>
           </nav>
 
-          {/* Lower Anchored Identity Block */}
           <div className="sidebar-profile-footer-box">
             <div className="profile-avatar-circle">JK</div>
             <div className="profile-identity-details">
@@ -125,7 +124,7 @@ function LandlordDashboard() {
         {/* Right Hand Dynamic Content Frame Workspace */}
         <main className="portal-content-workspace">
           
-          {/* Main Top Welcome Banner & Action Row */}
+          {/* Top Welcome Banner & Action Row */}
           <div className="workspace-header-row">
             <div className="header-greeting-block">
               <h2 className="welcome-heading-text">Welcome</h2>
@@ -136,7 +135,7 @@ function LandlordDashboard() {
             </button>
           </div>
 
-          {/* Matrix Top High-Level Card Row */}
+          {/* Matrix Top Card Row */}
           <div className="metrics-cards-grid">
             <div className="metric-data-card">
               <div className="metric-card-top-line">
@@ -166,7 +165,7 @@ function LandlordDashboard() {
             </div>
           </div>
 
-          {/* Bottom Side-by-Side Dual Deck Layout */}
+          {/* Bottom Side-by-Side Deck Layout */}
           <div className="workspace-dual-deck-row">
             
             {/* Left Side: Property Management List */}
@@ -252,9 +251,7 @@ function LandlordDashboard() {
 
               <button className="view-all-inquiries-block-btn">View All Inquiries</button>
             </div>
-
           </div>
-
         </main>
       </div>
     </div>

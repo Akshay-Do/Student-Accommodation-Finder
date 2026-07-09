@@ -2227,3 +2227,552 @@
     border-bottom: 1px solid #e2e8f0;
   }
 }
+
+/* Add listings form styling */
+.form-workspace-scrollbox {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #f6f8fa;
+  /* Soft continuous geometric backdrop mimicking the screenshot texture pattern */
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 24px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 100px 120px 24px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Header Context Treatments */
+.page-heading-block {
+  margin-bottom: 28px;
+}
+
+.page-main-title {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #003f87;
+  margin: 0 0 8px 0;
+}
+
+.page-subtitle-desc {
+  font-size: 14px;
+  color: #424752;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Reusable Container Card Blocks */
+.wizard-form-card {
+  background: #ffffff;
+  border: 1px solid #e9edf2;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(148, 163, 184, 0.06);
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.card-header-title {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: #191c1d;
+  margin: 0;
+}
+
+/* Icon Badges Color Variations */
+.icon-badge-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-badge-box.blue-theme { 
+  background: #d7e2ff; 
+  color: #003f87; 
+  font-size: 22px;
+}
+.icon-badge-box.purple-theme { 
+  background: #dddaee; 
+  color: #6d28d9;
+  font-size: 22px; 
+}
+.icon-badge-box.orange-theme { 
+  background: #f5e7c4; 
+  color: #c2410c; 
+  font-size: 22px;
+}
+.icon-badge-box.primary-theme { 
+  background: #c5f3d3; 
+  color: #15803d;
+  font-size: 22px; 
+}
+
+/* Grid Field Controls Styling Layouts */
+.card-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.full-width-cell {
+  grid-column: span 2;
+}
+
+.input-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-element-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #424752;
+}
+
+/* Text Inputs, Select Elements Elements Base Design */
+.field-text-box,
+.field-select-box,
+.field-textarea-box {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1e293b;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.field-text-box::placeholder,
+.field-textarea-box::placeholder {
+  color: #94a3b8;
+}
+
+.field-text-box:focus,
+.field-select-box:focus,
+.field-textarea-box:focus {
+  border-color: #004693;
+}
+
+/* Specific Prefix Layout Implementation */
+.prefix-input-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.input-prefix-label {
+  position: absolute;
+  left: 14px;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.field-text-box.prefixed {
+  padding-left: 48px;
+}
+
+.select-dropdown-wrapper {
+  position: relative;
+}
+
+/* Double Grid Column Matrix Layout for Essentials */
+.amenities-split-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.column-group-caption {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0056b3;
+  margin: 0 0 16px 0;
+}
+
+.checkbox-row-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 14px;
+  user-select: none;
+}
+
+.native-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox-box {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-right: 12px;
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.native-checkbox-input:checked + .custom-checkbox-box {
+  background-color: #004693;
+  border-color: #004693;
+}
+
+.native-checkbox-input:checked + .custom-checkbox-box::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.amenity-icon-text-row {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #191c1d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ui-inline-icon {
+  font-size: 20px;
+  color: #424752;
+}
+
+/* Safety Features Content Layout */
+.safety-card-container {
+  border: 2px dashed #cbd5e1 !important;
+  background-color: rgba(248, 250, 252, 0.4);
+}
+
+.safety-info-banner {
+  background: #fffbeb;
+  border-left: 4px solid #d97706;
+  border-radius: 4px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.banner-shield-icon {
+  font-size: 20px;
+  color: #c2410c;
+}
+
+.banner-message-text {
+  font-size: 14px;
+  color: #78350f;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.safety-blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.safety-option-tile {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.safety-option-tile.active {
+  border-color: #004693;
+  box-shadow: 0 0 0 1px #004693;
+}
+
+.tile-native-checkbox {
+  display: none;
+}
+
+.tile-custom-box {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  margin-right: 14px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.safety-option-tile.active .tile-custom-box {
+  background-color: #004693;
+  border-color: #004693;
+}
+
+.safety-option-tile.active .tile-custom-box::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.tile-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tile-title-header {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191c1d;
+  margin: 0;
+}
+
+.tile-desc-para {
+  font-size: 12px;
+  color: #424752;
+  margin: 0;
+}
+
+/* Media Uploader & Thumbnails Components Layout */
+.dashed-upload-dropzone {
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  background: #ffffff;
+  margin-bottom: 24px;
+}
+
+.cloud-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px auto;
+  font-size: 22px;
+  color: #003f87;
+}
+
+.upload-main-title-text {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  color: #191c1d;
+  margin: 0 0 6px 0;
+}
+
+.upload-constraints-text {
+  font-size: 14px;
+  color: #424752;
+  margin: 0 0 4px 0;
+}
+
+.browse-files-button-pill {
+  background-color: #003f87;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.media-preview-thumbnails-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.uploaded-thumbnail-box {
+  aspect-ratio: 1.4 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.uploaded-thumbnail-box.image-filled img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uploaded-thumbnail-box.structural-placeholder {
+  border: 1px dashed #cbd5e1;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-placeholder-icon {
+  font-size: 40px;
+  color: #94a3b8;
+}
+
+/* Verification Documents Component Styling Layout */
+.verification-section-disclaimer {
+  font-size: 16px;
+  color: #64748b;
+  margin: -12px 0 24px 0;
+}
+
+.document-upload-twin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.document-action-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.doc-meta-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.doc-type-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #191c1d;
+  margin: 0;
+}
+
+.doc-subtext-description {
+  font-size: 13px;
+  color: #424752;
+  margin: 0 0 16px 0;
+}
+
+.document-outline-select-btn {
+  width: 100%;
+  background: #ffffff;
+  border: 2px solid #003f87;
+  color: #003f87;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.doc-btn-icon {
+  font-size: 20px;
+  margin-top: 1px;
+}
+
+/* Submit and unsave button styling*/
+.form-submit-action {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.02);
+  z-index: 10;
+}
+
+.form-unsave-action-button {
+  background-color: #e6f0ff;
+  color: #424752;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.form-submit-action-button {
+  background-color: #003f87;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.form-submit-action-button:hover {
+  background-color: #002752;
+}
+
+/* Mobile Responsive Adapters Styles */
+@media (max-width: 768px) {
+  .card-fields-grid,
+  .amenities-split-columns,
+  .safety-blocks-grid,
+  .document-upload-twin-grid,
+  .media-preview-thumbnails-row {
+    grid-template-columns: 1fr;
+  }
+  .full-width-cell {
+    grid-column: span 1;
+  }
+  .wizard-form-card {
+    padding: 20px;
+  }
+}

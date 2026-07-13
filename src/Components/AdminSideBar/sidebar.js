@@ -3,14 +3,13 @@ import { TbLayoutDashboard } from "react-icons/tb";
 import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { GiCheckMark } from "react-icons/gi";
 import { FiClipboard } from "react-icons/fi";
 import { AiOutlineMessage } from "react-icons/ai";
 import { LuShieldCheck } from "react-icons/lu";
 import { IoMdSettings } from "react-icons/io";
 import { GoSignOut } from "react-icons/go";
 
-const Sidebar = () => {
+const Sidebar = ({ handleLogout }) => {
     const [activeTab, setActiveTab] = useState(0);
     const [isToggleSubmenu, setIsToggleSubmenu] = useState(false);
 
@@ -19,7 +18,7 @@ const Sidebar = () => {
         if (hasSubmenu) {
             setIsToggleSubmenu(!isToggleSubmenu);
         } else {
-            setIsToggleSubmenu(false); // Close submenu if clicking other main tabs
+            setIsToggleSubmenu(false);
         }
     };
 
@@ -98,21 +97,16 @@ const Sidebar = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#logout" className="sidebar-nav-item text-danger">
+                            <a href="#logout" className="sidebar-nav-item text-danger" onClick={(e) => {
+                                e.preventDefault(); // Prevents the page from appending '#' to URL
+                                handleLogout();    // Clears state in App.js
+                              }}>
                                 <GoSignOut className="nav-icon" />
                                 Sign Out
                             </a>
                         </li>
                     </ul>
                 </nav>
-    
-                <div className="sidebar-profile-footer-box">
-                    <div className="profile-avatar-circle">JK</div>
-                    <div className="profile-identity-details">
-                        <p className="profile-user-fullname">John Kamau</p>
-                        <span className="profile-badge-pill-verified"><GiCheckMark /> VERIFIED</span>
-                    </div>
-                </div>
             </aside>
         </div>
     );

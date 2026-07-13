@@ -1621,7 +1621,6 @@
   box-sizing: border-box;
 }
 
-/* Branding Section */
 .sidebar-top-branding {
   padding: 0 12px 24px 12px;
 }
@@ -1642,7 +1641,6 @@
   gap: 4px;
 }
 
-/* Reset lists if using standard semantic markup */
 .sidebar-navigation ul {
   list-style: none;
   padding: 0;
@@ -1652,7 +1650,6 @@
   gap: 4px;
 }
 
-/* Sidebar Nav Items / Material UI Button integration */
 .sidebar-nav-item,
 .sidebar-navigation .MuiButton-root {
   display: flex;
@@ -1665,7 +1662,7 @@
   font-size: 14px !important;
   font-weight: 600 !important;
   text-decoration: none;
-  text-transform: none !important; /* Disables Material UI default uppercase */
+  text-transform: none !important; 
   justify-content: flex-start !important;
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
@@ -1684,10 +1681,9 @@
   color: #001a40 !important;
 }
 
-/* Submenu container styling */
 .sidebar-submenu {
   list-style: none;
-  padding: 4px 0 4px 34px !important; /* Indents sub-links under the main text */
+  padding: 4px 0 4px 34px !important; 
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -1711,7 +1707,6 @@
   background-color: rgba(0, 70, 147, 0.04);
 }
 
-/* Smooth Arrow Indicator Rotation */
 .sidebar-arrow-indicator {
   margin-left: auto;
   display: flex;
@@ -1720,23 +1715,20 @@
 }
 
 .sidebar-arrow-indicator.rotated {
-  transform: rotate(90deg); /* Faces downwards when expanded */
+  transform: rotate(90deg);
 }
 
-/* Icons styling inside items */
 .nav-icon {
   font-size: 18px;
   flex-shrink: 0;
 }
 
-/* Submenu Arrow Indicator spacing */
 .sidebar-arrow-indicator {
   margin-left: auto;
   font-size: 12px;
   transition: transform 0.2s ease;
 }
 
-/* Menu Divider */
 .sidebar-menu-divider {
   border: 0;
   height: 1px;
@@ -1745,64 +1737,12 @@
   width: 100%;
 }
 
-/* Danger Zone Customizations */
 .sidebar-nav-item.text-danger {
   color: #ef4444 !important;
 }
 .sidebar-nav-item.text-danger:hover {
   background-color: rgba(239, 68, 68, 0.05) !important;
   color: #dc2626 !important;
-}
-
-/* Footer Profile Box */
-.sidebar-profile-footer-box {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  background-color: #f8fafc;
-  border-radius: 12px;
-  border: 1px solid var(--border-light);
-  margin-top: auto; /* Pushes profile block cleanly to the bottom */
-}
-
-.profile-avatar-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--primary-blue);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.profile-identity-details {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.profile-user-fullname {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin: 0;
-}
-
-.profile-badge-pill-verified {
-  font-size: 10px;
-  font-weight: 700;
-  color: #16a34a; /* Emerald green text */
-  background-color: #f0fdf4; /* Light emerald green fill */
-  padding: 2px 6px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  width: fit-content;
 }
 
 /* Right Side Content Workspace Area */
@@ -1964,7 +1904,7 @@
 }
 
 .flex-1 { 
-  flex: 1; 
+  flex: 0.81; 
 }
 
 .flex-2 { 
@@ -2250,7 +2190,6 @@
   box-sizing: border-box;
 }
 
-/* Header Context Treatments */
 .page-heading-block {
   margin-bottom: 28px;
 }
@@ -2295,7 +2234,6 @@
   margin: 0;
 }
 
-/* Icon Badges Color Variations */
 .icon-badge-box {
   width: 36px;
   height: 36px;
@@ -2325,7 +2263,6 @@
   font-size: 22px; 
 }
 
-/* Grid Field Controls Styling Layouts */
 .card-fields-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2348,7 +2285,6 @@
   color: #424752;
 }
 
-/* Text Inputs, Select Elements Elements Base Design */
 .field-text-box,
 .field-select-box,
 .field-textarea-box {
@@ -2375,7 +2311,6 @@
   border-color: #004693;
 }
 
-/* Specific Prefix Layout Implementation */
 .prefix-input-container {
   display: flex;
   position: relative;
@@ -2398,7 +2333,6 @@
   position: relative;
 }
 
-/* Double Grid Column Matrix Layout for Essentials */
 .amenities-split-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2775,4 +2709,29 @@
   .wizard-form-card {
     padding: 20px;
   }
+}
+
+/* All Properties Page Styling */
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.actions button {
+  min-width: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin: 0px 3px !important;
+}
+
+.actions button.success {
+  background: rgba(26, 159, 83, 0.3);
+}
+
+.actions button.error {
+  background: rgba(241, 17, 51, 0.3);
+}
+
+.actions button svg {
+  font-size: 32px !important;
 }
